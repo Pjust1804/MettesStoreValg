@@ -1,0 +1,166 @@
+:root {
+    --background: #f5eee3;
+    --surface: #fffdf8;
+    --text: #49382e;
+    --muted: #827064;
+    --green: #657c59;
+    --green-light: #e1e9d9;
+    --border: #dfd4c6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+header p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Aktiviteter */
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 16px;
+}
+
+.option input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--green);
+    flex-shrink: 0;
+}
+
+.option:has(input:checked) {
+    background: var(--green-light);
+    border-color: var(--green);
+}
+
+.option:active {
+    transform: scale(0.98);
+}
+
+/* Kommentarfelt */
+
+.comment-label {
+    display: block;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 16px;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--green);
+}
+
+/* Bekræftelsesknap */
+
+button {
+    width: 100%;
+    padding: 17px;
+    margin-top: 20px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+button:not(:disabled):active {
+    transform: scale(0.98);
+}
+
+/* Bekræftelsesskærm */
+
+#confirmation {
+    background: var(--surface);
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 2px solid var(--green);
+    text-align: center;
+    line-height: 1.6;
+}
+
+#confirmation h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: var(--green);
+}
+
+#selectedDate {
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mettes store valg</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+
+        <header>
+            <h1>Mettes store valg</h1>
+            <p>Otte muligheder. Én svær beslutning.</p>
+        </header>
+
+        <form id="dateForm"
+              action="https://formspree.io/f/mljbjznb"
+              method="POST">
+
+            <h2>Hvad skal vi finde på?</h2>
+
+            <div class="options">
+
+                <label class="option">
+                    <input type="radio" name="date" value="Bodegaquiz">
+                    <span>Bodegaquiz</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="date" value="Open mic stand-up">
+                    <span>Open mic stand-up</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="date" value="Filmaften">
+                    <span>Filmaften</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="date" value="Vinterbadning">
+                    <span>Vinterbadning</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="date" value="Løbetur">
+                    <span>Løbetur</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="date" value="Minigolf">
+                    <span>Minigolf</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="date" value="Lave aftensmad sammen">
+                    <span>Lave aftensmad sammen</span>
+                </label>
+
+                <label class="option">
+                    <input type="radio" name="date" value="Øl på et værtshus">
+                    <span>Øl på et værtshus</span>
+                </label>
+
+            </div>
+
+            <label class="comment-label" for="comment">
+                Andre forslag eller kommentarer?
+            </label>
+
+            <textarea
+                id="comment"
+                name="comment"
+                placeholder="Fyr løs..."
+                rows="4"
+            ></textarea>
+
+            <button id="submitButton" type="submit" disabled>
+                Bekræft mit valg
+            </button>
+
+        </form>
+
+        <section id="confirmation" hidden>
+            <h2>Dit ønske er modtaget!</h2>
+            <p id="selectedDate"></p>
+            <p>Tak for at have taget et valg.</p>
+            <p>jeg lover at svare hurtigst muligt.</p>
+        </section>
+
+        <footer>
+            Udarbejdet af Peter for Mette.
+        </footer>
+
+    </main>
+</body>
+</html>
